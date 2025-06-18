@@ -1,4 +1,10 @@
-<% @articles.each do |article| %>
-  <%= article.content %>
-  </br>
-<% end %>
+<div class="container">
+
+  <% @articles.each do |article| %>
+    <div class="article_content">
+      <%= article.content %>
+    </div>
+  <% end %>
+
+</div>
+

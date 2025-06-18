@@ -1,0 +1,188 @@
+@import 'variables';
+
+$card_height: 300px;
+
+.card {
+  background-color: $base-bg-color;
+  border-radius: $border-radius;
+  margin: 20px 0;
+  width: $width;
+  font-size: $font-size;
+
+// --------- index ---------
+
+  &_article_content {
+    font-family: $font-family;
+    margin: 15px 0;
+    color: $text-second-base-color;
+    font-size: $font-size - 2 ;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+
+// --------- task ---------
+
+  // &_task_description {
+  //   font-family: $font-family;
+  //   margin-top: 10px;
+  //   color: $text-second-base-color;
+  //   // 1行で表示させて、続きは「・・・」にするコード
+  //   overflow: hidden;
+  //   text-overflow: ellipsis;
+  //   white-space: nowrap;
+  //   font-size: $font-size - 2 ;
+  // }
+
+  // &_task_inner {
+  //   padding: 15px 20px;
+  //   width: 90%;
+
+  //   &_title {
+  //     text-decoration: none;
+  //     font-weight: bold;
+  //     font-family: $font-family;
+  //     // 1行で表示させて、続きは「・・・」にするコード
+  //     overflow: hidden;
+  //     text-overflow: ellipsis;
+  //     white-space: nowrap;
+  //   }
+
+  //   &_description {
+  //     font-family: $font-family;
+  //     margin: 15px 0;
+  //     color: $text-second-base-color;
+  //     font-size: $font-size - 2 ;
+  //     word-wrap: break-word;
+  //     overflow-wrap: break-word;
+  //   }
+  // }
+
+// --------- new ---------
+
+  &_new a {
+    width: $width;
+    font-family: $font-family;
+    text-align: center;
+    border-radius: $border-radius;
+    border: dashed 2px $base-bg-color;
+    line-height: $card_height / 2;
+  }
+
+  &_new_comment a {
+    width: $width;
+    font-family: $font-family;
+    text-align: center;
+    border-radius: $border-radius;
+    border: dashed 2px $base-bg-color;
+    line-height: $card_height / 5;
+  }
+
+// --------- eyecatch ---------
+
+  &_image {
+
+    img {
+      width: 100%;
+      height: $card_height / 2 ;
+      object-fit: cover;
+      padding: 15px 15px 0 15px;
+    }
+  }
+}
+
+// --------- board flex ---------
+
+.board_flex {
+  display: flex;
+
+  &_inner_left {
+    padding: 30px 20px;
+    width: 90%;
+    }
+
+  &_right {
+    width: 10%;
+  }
+}
+
+.fa-solid {
+  padding-top: 15px;
+}
+
+// --------- task index flex ---------
+
+.task_flex {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px 15px 20px;
+
+  &_left {
+    position: relative;
+  }
+
+  &_right {
+    font-size: 12px;
+    color: $text-second-base-color;
+  }
+}
+
+// --------- task show flex ---------
+
+.task_show_flex {
+  display: flex;
+  width: $width;
+  margin-bottom: 16px;
+
+  &_left {
+    font-family: $font-family;
+    font-size: 18px;
+    width: 95%;
+  }
+
+  &_right {
+    width: 5%;
+  }
+}
+
+.card_task_show_inner_description {
+  background-color: $base-bg-color;
+  border-radius: $border-radius;
+  margin: 20px 0;
+  padding: 20px 10px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  width: $width;
+  font-size: $font-size - 2 ;
+}
+
+.card_task_image img {
+  width: $width;
+  height: $card_height / 2 ;
+  object-fit: cover;
+}
+
+.card_task_deadline {
+  width: $width;
+  text-align: right;
+  font-size: $font-size - 3 ;
+}
+
+// --------- comment ---------
+
+.card_comment_title {
+margin: 30px 0;
+font-weight: normal;
+font-family: $font-family;
+}
+
+.card_comment_flex {
+  display: flex;
+  width: $width;
+  margin: 20px 0;
+}
+
+.card_inner_comment {
+  width: 85%;
+  font-size: $font-size - 4 ;
+  padding: 0 10px;
+}
