@@ -3,7 +3,7 @@
 .btn-primary {
   width: $width;
   font-weight: bold;
-  color: white;
+  color: black;
   font-size: $font-size;
   background: $primary-color;
   margin-top: 100px;
@@ -16,18 +16,17 @@
 
 .btn-secondary {
   display: block;
-  width: $width / 2;
+  width: $width;
   font-weight: bold;
   line-height: 19px;
   text-align: center;
-  color: white;
-  font-size: $font-size - 2;
+  color: black;
+  font-size: $font-size;
   background: $primary-color;
   padding: 10px 24px;
   margin-top: 15px;
   height: 38px;
   border: none;
-  border-radius: $border-radius;
 
   &:hover {
     cursor: pointer;
