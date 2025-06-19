@@ -1,0 +1,35 @@
+@import 'variables';
+
+.btn-primary {
+  width: $width;
+  font-weight: bold;
+  color: black;
+  font-size: $font-size;
+  background: $primary-color;
+  margin-top: 100px;
+
+  &:hover {
+    cursor: pointer;
+    opacity: 0.8;
+  }
+}
+
+.btn-secondary {
+  display: block;
+  width: $width;
+  font-weight: bold;
+  line-height: 19px;
+  text-align: center;
+  color: black;
+  font-size: $font-size;
+  background: $primary-color;
+  padding: 10px 24px;
+  margin-top: 15px;
+  height: 38px;
+  border: none;
+
+  &:hover {
+    cursor: pointer;
+    opacity: 0.8;
+  }
+}
