@@ -1,0 +1,20 @@
+<div class="container">
+  <div class='profile-top'>
+
+    <%# アカウント名を入れる %>
+    <p class="account-name"><%= @account_name %></p>
+
+      <%= form_with(model: @profile, url: profile_path, method: 'put', local: true) do |f| %>
+          <div>
+            <%# defaultのアバター %>
+            <%= image_tag "default-avatar.png", class: "avatar-img" %>
+
+            <%# プロフィールのアバターを変更する %>
+            <%#= f.file_field :avatar %>
+            <%#= f.submit 'change', class: 'btn-primary' %>
+
+          </div>
+      <% end %>
+  </div>
+
+</div>
