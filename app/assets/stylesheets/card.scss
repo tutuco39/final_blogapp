@@ -20,42 +20,15 @@ $card_height: 300px;
     overflow-wrap: break-word;
   }
 
-// --------- task ---------
+// --------- profile ---------
 
-  // &_task_description {
-  //   font-family: $font-family;
-  //   margin-top: 10px;
-  //   color: $text-second-base-color;
-  //   // 1行で表示させて、続きは「・・・」にするコード
-  //   overflow: hidden;
-  //   text-overflow: ellipsis;
-  //   white-space: nowrap;
-  //   font-size: $font-size - 2 ;
-  // }
+.profile-top {
+  
+}
 
-  // &_task_inner {
-  //   padding: 15px 20px;
-  //   width: 90%;
-
-  //   &_title {
-  //     text-decoration: none;
-  //     font-weight: bold;
-  //     font-family: $font-family;
-  //     // 1行で表示させて、続きは「・・・」にするコード
-  //     overflow: hidden;
-  //     text-overflow: ellipsis;
-  //     white-space: nowrap;
-  //   }
-
-  //   &_description {
-  //     font-family: $font-family;
-  //     margin: 15px 0;
-  //     color: $text-second-base-color;
-  //     font-size: $font-size - 2 ;
-  //     word-wrap: break-word;
-  //     overflow-wrap: break-word;
-  //   }
-  // }
+.account-name {
+  font-size: 10px;
+}
 
 // --------- new ---------
 

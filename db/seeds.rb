@@ -10,13 +10,13 @@
 
 Faker::Config.locale = 'en'
 
-# 2.times do
-#   User.create!(
-#     email: Faker::Internet.unique.email,
-#     password: 'password123',
-#     password_confirmation: 'password123'
-#   )
-# end
+2.times do
+  User.create!(
+    account_name: Faker::Name.name,
+    email: Faker::Internet.unique.email,
+    password: 'password123',
+  )
+end
 
 users = User.all
 
