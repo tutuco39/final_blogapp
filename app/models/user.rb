@@ -9,7 +9,7 @@ class User < ApplicationRecord
   validates :email, presence: true
   validates :password, presence: true
 
-  has_many :article, dependent: :destroy
+  has_many :articles, dependent: :destroy
   has_one :profile, dependent: :destroy
 
 end

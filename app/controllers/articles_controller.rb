@@ -3,6 +3,9 @@ class ArticlesController < ApplicationController
     @articles = Article.all
   end
 
+  def show
+  end
+
   def new
     @article = current_user.articles.build
   end
