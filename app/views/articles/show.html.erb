@@ -2,7 +2,7 @@
   <div class='profile-top'>
 
     <%# アカウント名を入れる %>
-    <p class="account-name"><%= @account_name %></p>
+    <p class="account-name"><%= @user.account_name %></p>
 
       <%= form_with(model: @profile, url: profile_path, method: 'put', local: true) do |f| %>
           <div>
@@ -16,5 +16,9 @@
           </div>
       <% end %>
   </div>
+
+  <% user.articles.each do |article| %>
+    <%= article.content %>
+  <% end %>
 
 </div>

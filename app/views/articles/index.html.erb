@@ -1,12 +1,15 @@
 <div class="container">
 
   <% @articles.each do |article| %>
-    <div class="article_content">
+    <div class="article-account-name">
+      <%= article.user.account_name %>
+    </div>
+    <div class="article-content">
       <%= article.content %>
     </div>
   <% end %>
 
-  <%= link_to 'Profile', profile_path, class: 'btn-secondary' %>
+  <%#= link_to 'Profile', profile_path, class: 'btn-secondary' %>
   <%= link_to 'Sign out', destroy_user_session_path, turbo_method: :delete, class: 'btn-secondary' %>
 
 
