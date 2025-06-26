@@ -1,8 +1,8 @@
 <div class="container">
-
+  
   <% @articles.each do |article| %>
     <div class="article-account-name">
-      <%= article.user.account_name %>
+      <%= link_to article.user.account_name, user_profile_path(article.user.id) %>
     </div>
     <div class="article-content">
       <%= article.content %>

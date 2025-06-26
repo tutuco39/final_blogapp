@@ -20,7 +20,7 @@ end
 
 users = User.all
 
-5.times do
+1.times do
   Article.create!(
     content: Faker::Lorem.sentence(word_count: 5),
     user_id: users.sample.id  # ランダムなユーザーと紐づけ
