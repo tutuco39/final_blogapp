@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   devise_for :users
   resources :articles
-  # resource :profile, only: [:show]
+
+  get '/:id/profile', to: 'users#show', as: 'user_profile'
+
 
   root to: 'articles#index'
 
