@@ -10,19 +10,20 @@
 
 Faker::Config.locale = 'en'
 
-2.times do
-  User.create!(
-    account_name: Faker::Name.name,
-    email: Faker::Internet.unique.email,
-    password: 'password123',
-  )
-end
+# 2.times do
+#   User.create!(
+#     account_name: Faker::Name.name,
+#     email: Faker::Internet.unique.email,
+#     password: 'password123',
+#   )
+# end
 
 users = User.all
 
 1.times do
   Article.create!(
     content: Faker::Lorem.sentence(word_count: 5),
-    user_id: users.sample.id  # ランダムなユーザーと紐づけ
+    user_id: '4'  # ランダムなユーザーと紐づけ
+    # users.sample.id
   )
 end

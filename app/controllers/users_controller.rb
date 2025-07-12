@@ -1,13 +1,16 @@
 class UsersController < ApplicationController
 
-  def show
-    @user = User.find_by(id: params[:id])
-    unless @user
-      redirect_to root_path, alert: "ユーザーが見つかりません"
-      return
-    end
-    # 誰でも表示可能（current_userでなくてもOK）
-    render :show
+  def new
+    @user = User.new
+    @user.build_profile
   end
+
+# def create
+#   @user = User.new
+#   if @user.save
+#     Profile.create
+#     sign_in(@user)
+#     redirect_to profile_path(@user)
+# end
 
 end
