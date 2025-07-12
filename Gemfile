@@ -33,7 +33,7 @@ gem 'bootsnap', require: false
 
 gem 'devise', '~> 4.9'
 gem 'erb2haml'
-gem 'hamlit'
+gem 'haml-rails', '~> 2.1'
 gem 'faker'
 gem 'sassc-rails'
 
