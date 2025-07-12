@@ -1,0 +1,15 @@
+= image_tag "top-img.jpg", class: "top-img"
+.container
+  = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+    .field
+      = f.label :email
+      %br/
+      = f.email_field :email, autofocus: true, autocomplete: "email", class: "text"
+    .field
+      = f.label :password
+      %br/
+      = f.password_field :password, autocomplete: "current-password", class: "text"
+    %p Forgot password?
+    .actions
+      = f.submit "LOGIN", class: "btn-primary"
+  = link_to 'CREATE ACCOUNT', new_user_registration_path, class: "btn-secondary"
