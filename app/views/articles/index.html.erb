@@ -2,7 +2,7 @@
   
   <% @articles.each do |article| %>
     <div class="article-account-name">
-      <%= link_to article.user.account_name, user_profile_path(article.user.id) %>
+      <%= link_to article.user.account_name, profile_path(article.user_id) %>
     </div>
     <div class="article-content">
       <%= article.content %>

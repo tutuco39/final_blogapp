@@ -1,0 +1,35 @@
+<div class="container">
+  <%= link_to '←', root_path %>
+  <br/>
+
+  <div class='profile-top'>
+
+    <%# アカウント名を入れる %>
+    <p class="account-name"><%= @user.account_name %></p>
+
+      <%= form_with(model: @profile, url: profile_path(@user), method: 'put', local: true) do |f| %>
+          <div>
+            <%# defaultのアバター %>
+            <% f.label :avatar, 'アバター' %>
+              <% if @user.avatar&.attached? %>
+                <%= image_tag @user.profile.avatar_image, class: 'avatar-img' %>
+              <% else %>
+                <%= image_tag "default-avatar.png", class: "avatar-img" %>
+              <% end %>
+              <%= f.file_field :avatar %>
+            <%# </label> %>
+
+            <%# プロフィールのアバターを変更する %>
+            <br/>
+            <%= f.submit 'change', class: 'btn-primary' %>
+
+          </div>
+      <% end %>
+  </div>
+
+  <% @user.articles.each do |article| %>
+    <%= article.content %>
+    <br/>
+  <% end %>
+
+</div>
