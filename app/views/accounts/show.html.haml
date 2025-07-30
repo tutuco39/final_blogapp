@@ -9,9 +9,6 @@
         = image_tag @user.profile.avatar_image, class: 'avatar-img'
       - else
         = image_tag "default-avatar.png", class: "avatar-img"
-
-      - if @user == current_user
-        = link_to 'Edit', edit_profile_path(@user)
     %br/
 
   - @user.articles.each do |article|

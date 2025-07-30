@@ -1,7 +1,7 @@
 .container
   - @articles.each do |article|
     .article-account-name
-      = link_to article.user.account_name, profile_path(article.user_id)
+      = link_to article.user.account_name, account_path(article.user_id)
     .article-content
       = article.content
   = link_to 'Sign out', destroy_user_session_path, turbo_method: :delete, class: 'btn-secondary'

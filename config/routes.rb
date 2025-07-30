@@ -3,8 +3,9 @@ Rails.application.routes.draw do
   resources :articles
 
   # get '/:id/profile', to: 'profiles#show', as: 'user_profile'
-  resources :profiles, only: [:show, :edit, :create, :update, :destroy]
+  resource :profile, only: [:show, :edit, :create, :update, :destroy]
 
+  resources :accounts, only: [:show]
 
   root to: 'articles#index'
 
